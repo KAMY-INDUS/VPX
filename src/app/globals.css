@@ -1,33 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --first:white;
+  --second:#3DC2EC;
+  --third:#4B70F5;
+  --fourth:#4C3BCF;
+  --fifth: #402E7A;
+  --sixth:#bbefff;
+  --text:#5AB2FF;
 }
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Merriweather";
+  font-weight: 300;
+  font-style: normal;
+}
+body{
+  background-color: var(--first);
+}
+/*********************************************************NAV BAR**************************************************************************/
+.Nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  background-color: #CAF4FF;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+}
+.searchbar{
+  display: flex;
+  flex-direction: row;
+  gap:5px;
+  background-color: var(--sixth);
+  width: 25vw;
+  padding: 10px;
+  border-radius: 50px;
+}
+.searchbar input{
+  flex: 1;
+  padding: 0px 10px;
+  background-color: transparent;
+}
+input:focus{
+  outline: none;
+}
+.searchbar input:active{
+  border-color:#3DC2EC;
+}
+.topics{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap:4vw;
+}
+ 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.logo{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  background-color: black;
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+#login{
+  display: flex;
+  min-height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--first);
+}
+#firebaseui-auth-container{
+  display: flex;
+  flex-direction: column;
+}
+.firebaseui-idp-icon{
+  width: 20px;
+  height: 20px;
+}
+.firebaseui-idp-button{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap:10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 100%;
+}
+.firebaseui-idp-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.log{
+  width: fit-content;
+  position: relative;
+  top: 26px;
+  margin-left: 10px;
+}
+.logincontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--second);
+}
+.loginhead{
+  font-weight:600;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.firebaseui-idp-text-long{
+  color: gray;
+}
+.firebaseui-idp-text-short{
+  display: none;
+}
+.userimg{
+  border-radius: 50%;
+}
+.topic{
+  cursor: pointer;
+  color:white;
+}
+.loginbtn{
+  background-color: var(--sixth);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 825px){
+  .bigd{
+    display:none
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (min-width:825px){
+  .smalld{
+    display: none;
   }
+}
+.profitems{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: var(--second);
+  width: max-content;
+  right: 20px;
+  top: 80px;
+  padding: 15px;
+  color: white;
 }
